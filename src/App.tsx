@@ -1,6 +1,15 @@
+import { Amplify } from 'aws-amplify';
+import { generateClient } from "aws-amplify/api";
 import { Authenticator } from "@aws-amplify/ui-react";
-import { AIConversation } from '@aws-amplify/ui-react-ai';
-import { useAIConversation } from './client';
+import { AIConversation, createAIHooks } from '@aws-amplify/ui-react-ai';
+import '@aws-amplify/ui-react/styles.css';
+import outputs from "../amplify_outputs.json";
+import { Schema } from "../amplify/data/resource";
+
+Amplify.configure(outputs);
+
+const client = generateClient<Schema>({ authMode: "userPool" });
+const { useAIConversation } = createAIHooks(client);
 
 export default function App() {
   const [
