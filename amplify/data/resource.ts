@@ -21,7 +21,7 @@ const schema = a.schema({
     .authorization((allow) => allow.authenticated()),
 
   chat: a.conversation({
-    aiModel: a.ai.model('Claude 3.5 Haiku'),
+    aiModel: a.ai.model('Claude 3 Haiku'),
     systemPrompt: 'You are a helpful assistant',  
     tools: [
       a.ai.dataTool({
