@@ -24,7 +24,7 @@ const KnowledgeBaseDataSource =
 KnowledgeBaseDataSource.grantPrincipal.addToPrincipalPolicy(
   new PolicyStatement({
     resources: [
-      `arn:aws:bedrock:${cdk.Stack.of(backend.data).region}:783413248379:knowledge-base/BTTXNNXJBS`
+      `arn:aws:bedrock:${cdk.Stack.of(backend.data).region}:783413248379:knowledge-base/49XOADRBAW`
     ],
     actions: ["bedrock:Retrieve"],
   }),
