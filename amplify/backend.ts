@@ -15,7 +15,7 @@ const KnowledgeBaseDataSource =
     `https://bedrock-runtime.us-east-1.amazonaws.com`,
     {
       authorizationConfig: {
-        signingRegion: cdk.Stack.of(backend.data).region,
+        signingRegion: "us-east-1",
         signingServiceName: "bedrock",
       },
     },
