@@ -1,7 +1,7 @@
 export function request(ctx) {
     const { input } = ctx.args;
     return {
-      resourcePath: "/knowledgebases/49XOADRBAW/retrieve",
+      resourcePath: "/knowledgebases/5IFCLQXEVT/retrieve",
       method: "POST",
       params: {
         headers: {
