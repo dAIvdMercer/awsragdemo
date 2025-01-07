@@ -22,7 +22,7 @@ const schema = a.schema({
 
   chat: a.conversation({
     aiModel: a.ai.model('Claude 3 Haiku'),
-    systemPrompt: 'Use the searchDocumentation tool to respond to math questions only. Only respond with information from the tool. If no information is available, inform the user. Be concise.',  
+    systemPrompt: 'Only respond with citations from the searchDocumentation tool. If no information is available, respond accordingly. Answer concisely.',  
     tools: [
       a.ai.dataTool({
         name: 'searchDocumentation',
